@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Lagom - YouTube Feed Customizer",
+    "version": "1.0",
+    "description": "Customize your YouTube feed with AI-powered recommendations based on your interests.",
+    "permissions": ["storage", "activeTab"],
+    "host_permissions": ["https://www.youtube.com/*", "https://www.googleapis.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["feed.html", "search.html"],
+        "matches": ["https://www.youtube.com/*"]
+      }
+    ]
+  }
