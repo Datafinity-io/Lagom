@@ -8,17 +8,17 @@
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js": ["content.js"],
+      "js": ["search.js", "feed.js"],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["feed.html", "search.html"],
+      "resources": ["feed.html", "search.html", "icons/lagom.png", "icons/datafinity.png"],
       "matches": ["https://www.youtube.com/*"]
     }
   ],
   "icons": {
-    "128": "icons/Logo.png"
+    "128": "icons/lagom.png"
   }
 }
